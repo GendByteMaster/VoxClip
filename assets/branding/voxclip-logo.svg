@@ -1,66 +1,82 @@
 <svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>VoxClip logo</title>
+  <desc>Transparent VoxClip mark combining copied text, a document, and a speech waveform.</desc>
+
   <defs>
-    <linearGradient id="frame" x1="152" y1="126" x2="846" y2="900" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#087BFF"/>
-      <stop offset="0.48" stop-color="#1269F4"/>
-      <stop offset="1" stop-color="#10D7E9"/>
+    <linearGradient id="frameGradient" x1="150" y1="132" x2="868" y2="884" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1177FF"/>
+      <stop offset="0.52" stop-color="#0B7CFF"/>
+      <stop offset="1" stop-color="#18D5E8"/>
     </linearGradient>
-    <linearGradient id="fold" x1="571" y1="188" x2="742" y2="374" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#006BFF"/>
-      <stop offset="1" stop-color="#16D8EA"/>
-    </linearGradient>
-    <linearGradient id="paper" x1="340" y1="216" x2="665" y2="730" gradientUnits="userSpaceOnUse">
+
+    <linearGradient id="paperGradient" x1="318" y1="204" x2="650" y2="754" gradientUnits="userSpaceOnUse">
       <stop stop-color="#FFFFFF"/>
-      <stop offset="0.62" stop-color="#F1F7FF"/>
-      <stop offset="1" stop-color="#D9E8FF"/>
+      <stop offset="0.64" stop-color="#F5F9FF"/>
+      <stop offset="1" stop-color="#E5F0FF"/>
     </linearGradient>
-    <linearGradient id="bubble" x1="535" y1="472" x2="852" y2="817" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#06C9EB"/>
-      <stop offset="0.38" stop-color="#087BFF"/>
-      <stop offset="1" stop-color="#1837F4"/>
+
+    <linearGradient id="foldGradient" x1="588" y1="194" x2="745" y2="350" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F71FF"/>
+      <stop offset="1" stop-color="#17D7E8"/>
     </linearGradient>
-    <linearGradient id="stream" x1="244" y1="566" x2="565" y2="566" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#10D7E9"/>
-      <stop offset="1" stop-color="#1269F4"/>
+
+    <linearGradient id="bubbleGradient" x1="552" y1="425" x2="878" y2="779" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#19D6E8"/>
+      <stop offset="0.36" stop-color="#0C8CFF"/>
+      <stop offset="1" stop-color="#2447F5"/>
     </linearGradient>
-    <filter id="softShadow" x="210" y="160" width="700" height="740" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-      <feDropShadow dx="0" dy="20" stdDeviation="22" flood-color="#041B4D" flood-opacity="0.18"/>
+
+    <linearGradient id="motionGradient" x1="268" y1="604" x2="565" y2="604" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#17D7E8"/>
+      <stop offset="1" stop-color="#1177FF"/>
+    </linearGradient>
+
+    <filter id="documentShadow" x="248" y="148" width="586" height="682" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#082451" flood-opacity="0.14"/>
     </filter>
-    <filter id="bubbleShadow" x="443" y="400" width="500" height="526" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#052D91" flood-opacity="0.22"/>
+
+    <filter id="bubbleShadow" x="466" y="360" width="494" height="518" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#0A3A9B" flood-opacity="0.20"/>
     </filter>
   </defs>
 
-  <!-- Selection / copy frame -->
-  <path d="M151 307V188C151 155 178 128 211 128H333" stroke="url(#frame)" stroke-width="68" stroke-linecap="round"/>
-  <path d="M691 128H813C846 128 873 155 873 188V307" stroke="url(#frame)" stroke-width="68" stroke-linecap="round"/>
-  <path d="M151 718V837C151 870 178 897 211 897H333" stroke="url(#frame)" stroke-width="68" stroke-linecap="round"/>
-  <path d="M691 897H813C846 897 873 870 873 837V718" stroke="url(#frame)" stroke-width="68" stroke-linecap="round" opacity="0.9"/>
-
-  <!-- Document -->
-  <g filter="url(#softShadow)">
-    <path d="M316 216C316 185 341 160 372 160H605L744 299V687C744 718 719 743 688 743H372C341 743 316 718 316 687V216Z" fill="url(#paper)"/>
-    <path d="M605 160L744 299H651C626 299 605 278 605 253V160Z" fill="url(#fold)"/>
-    <path d="M388 332H564" stroke="#67A8F7" stroke-width="34" stroke-linecap="round"/>
-    <path d="M388 414H564" stroke="#67A8F7" stroke-width="34" stroke-linecap="round"/>
-    <path d="M388 496H505" stroke="#67A8F7" stroke-width="34" stroke-linecap="round"/>
+  <!-- Copy / selection frame. Large gaps keep the mark readable at app-icon sizes. -->
+  <g stroke="url(#frameGradient)" stroke-width="58" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M180 310V210C180 177 207 150 240 150H340"/>
+    <path d="M684 150H784C817 150 844 177 844 210V310"/>
+    <path d="M180 714V814C180 847 207 874 240 874H340"/>
+    <path d="M684 874H784C817 874 844 847 844 814V714"/>
   </g>
 
-  <!-- Fast copy / stream signal -->
-  <path d="M244 573H545" stroke="url(#stream)" stroke-width="38" stroke-linecap="round"/>
-  <path d="M296 652H468" stroke="url(#stream)" stroke-width="31" stroke-linecap="round"/>
-  <circle cx="245" cy="652" r="16" fill="#10D7E9"/>
+  <!-- Document -->
+  <g filter="url(#documentShadow)">
+    <path d="M304 254C304 215 335 184 374 184H596L734 322V700C734 739 703 770 664 770H374C335 770 304 739 304 700V254Z" fill="url(#paperGradient)"/>
+    <path d="M596 184L734 322H654C622 322 596 296 596 264V184Z" fill="url(#foldGradient)"/>
 
-  <!-- Speech / TTS bubble -->
+    <path d="M382 354H536" stroke="#6DAAF4" stroke-width="28" stroke-linecap="round"/>
+    <path d="M382 420H566" stroke="#6DAAF4" stroke-width="28" stroke-linecap="round"/>
+    <path d="M382 486H512" stroke="#6DAAF4" stroke-width="28" stroke-linecap="round"/>
+  </g>
+
+  <!-- Fast copy / text-to-speech hand-off -->
+  <g stroke="url(#motionGradient)" stroke-linecap="round">
+    <path d="M268 586H522" stroke-width="32"/>
+    <path d="M318 646H490" stroke-width="26"/>
+    <path d="M358 700H458" stroke-width="22"/>
+  </g>
+
+  <!-- Speech / TTS surface -->
   <g filter="url(#bubbleShadow)">
-    <path d="M511 468C511 421 549 383 596 383H805C852 383 890 421 890 468V677C890 724 852 762 805 762H701L604 848L626 762H596C549 762 511 724 511 677V468Z" fill="url(#bubble)"/>
-    <path d="M511 468C511 421 549 383 596 383H805C852 383 890 421 890 468V677C890 724 852 762 805 762H701L604 848L626 762H596C549 762 511 724 511 677V468Z" stroke="#48DDF0" stroke-opacity="0.58" stroke-width="5"/>
+    <path d="M526 480C526 429 567 388 618 388H786C837 388 878 429 878 480V662C878 713 837 754 786 754H707L622 830L642 754H618C567 754 526 713 526 662V480Z" fill="url(#bubbleGradient)"/>
+    <path d="M526 480C526 429 567 388 618 388H786C837 388 878 429 878 480V662C878 713 837 754 786 754H707L622 830L642 754H618C567 754 526 713 526 662V480Z" stroke="white" stroke-opacity="0.16" stroke-width="4"/>
   </g>
 
   <!-- Voice waveform -->
-  <rect x="595" y="548" width="32" height="104" rx="16" fill="white"/>
-  <rect x="651" y="495" width="36" height="210" rx="18" fill="white"/>
-  <rect x="714" y="449" width="40" height="302" rx="20" fill="white"/>
-  <rect x="781" y="505" width="36" height="190" rx="18" fill="white"/>
-  <rect x="840" y="558" width="30" height="84" rx="15" fill="white"/>
+  <g fill="white">
+    <rect x="598" y="554" width="28" height="94" rx="14"/>
+    <rect x="651" y="500" width="32" height="202" rx="16"/>
+    <rect x="708" y="462" width="36" height="278" rx="18"/>
+    <rect x="769" y="510" width="32" height="182" rx="16"/>
+    <rect x="824" y="561" width="28" height="80" rx="14"/>
+  </g>
 </svg>
