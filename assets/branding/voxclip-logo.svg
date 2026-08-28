@@ -1,0 +1,66 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="frame" x1="152" y1="126" x2="846" y2="900" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#087BFF"/>
+      <stop offset="0.48" stop-color="#1269F4"/>
+      <stop offset="1" stop-color="#10D7E9"/>
+    </linearGradient>
+    <linearGradient id="fold" x1="571" y1="188" x2="742" y2="374" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#006BFF"/>
+      <stop offset="1" stop-color="#16D8EA"/>
+    </linearGradient>
+    <linearGradient id="paper" x1="340" y1="216" x2="665" y2="730" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="0.62" stop-color="#F1F7FF"/>
+      <stop offset="1" stop-color="#D9E8FF"/>
+    </linearGradient>
+    <linearGradient id="bubble" x1="535" y1="472" x2="852" y2="817" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#06C9EB"/>
+      <stop offset="0.38" stop-color="#087BFF"/>
+      <stop offset="1" stop-color="#1837F4"/>
+    </linearGradient>
+    <linearGradient id="stream" x1="244" y1="566" x2="565" y2="566" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#10D7E9"/>
+      <stop offset="1" stop-color="#1269F4"/>
+    </linearGradient>
+    <filter id="softShadow" x="210" y="160" width="700" height="740" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="20" stdDeviation="22" flood-color="#041B4D" flood-opacity="0.18"/>
+    </filter>
+    <filter id="bubbleShadow" x="443" y="400" width="500" height="526" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#052D91" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+
+  <!-- Selection / copy frame -->
+  <path d="M151 307V188C151 155 178 128 211 128H333" stroke="url(#frame)" stroke-width="68" stroke-linecap="round"/>
+  <path d="M691 128H813C846 128 873 155 873 188V307" stroke="url(#frame)" stroke-width="68" stroke-linecap="round"/>
+  <path d="M151 718V837C151 870 178 897 211 897H333" stroke="url(#frame)" stroke-width="68" stroke-linecap="round"/>
+  <path d="M691 897H813C846 897 873 870 873 837V718" stroke="url(#frame)" stroke-width="68" stroke-linecap="round" opacity="0.9"/>
+
+  <!-- Document -->
+  <g filter="url(#softShadow)">
+    <path d="M316 216C316 185 341 160 372 160H605L744 299V687C744 718 719 743 688 743H372C341 743 316 718 316 687V216Z" fill="url(#paper)"/>
+    <path d="M605 160L744 299H651C626 299 605 278 605 253V160Z" fill="url(#fold)"/>
+    <path d="M388 332H564" stroke="#67A8F7" stroke-width="34" stroke-linecap="round"/>
+    <path d="M388 414H564" stroke="#67A8F7" stroke-width="34" stroke-linecap="round"/>
+    <path d="M388 496H505" stroke="#67A8F7" stroke-width="34" stroke-linecap="round"/>
+  </g>
+
+  <!-- Fast copy / stream signal -->
+  <path d="M244 573H545" stroke="url(#stream)" stroke-width="38" stroke-linecap="round"/>
+  <path d="M296 652H468" stroke="url(#stream)" stroke-width="31" stroke-linecap="round"/>
+  <circle cx="245" cy="652" r="16" fill="#10D7E9"/>
+
+  <!-- Speech / TTS bubble -->
+  <g filter="url(#bubbleShadow)">
+    <path d="M511 468C511 421 549 383 596 383H805C852 383 890 421 890 468V677C890 724 852 762 805 762H701L604 848L626 762H596C549 762 511 724 511 677V468Z" fill="url(#bubble)"/>
+    <path d="M511 468C511 421 549 383 596 383H805C852 383 890 421 890 468V677C890 724 852 762 805 762H701L604 848L626 762H596C549 762 511 724 511 677V468Z" stroke="#48DDF0" stroke-opacity="0.58" stroke-width="5"/>
+  </g>
+
+  <!-- Voice waveform -->
+  <rect x="595" y="548" width="32" height="104" rx="16" fill="white"/>
+  <rect x="651" y="495" width="36" height="210" rx="18" fill="white"/>
+  <rect x="714" y="449" width="40" height="302" rx="20" fill="white"/>
+  <rect x="781" y="505" width="36" height="190" rx="18" fill="white"/>
+  <rect x="840" y="558" width="30" height="84" rx="15" fill="white"/>
+</svg>
